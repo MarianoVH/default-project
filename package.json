@@ -12,7 +12,8 @@
     "dev": "vite",
     "lint-fix": "eslint . --fix",
     "format": "prettier --write .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "prepare": "husky install"
   },
   "dependencies": {
     "react": "17.0.2",
@@ -41,5 +42,9 @@
     "prettier": "2.5.1",
     "typescript": "4.5.4",
     "vite": "2.8.0"
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix",
+    "*.{js,css,md}": "prettier --write"
   }
 }
